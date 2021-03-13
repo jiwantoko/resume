@@ -1,122 +1,184 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  background: #f6f6f6;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 30px;
+  padding: 60px;
+  flex-basis: 60%;
+  border: 2px #ddd solid;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
-.footer {
+.profile {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.profile img {
+  width: 200px;
+  margin: auto; 
+  border-radius: 50%;
+}
+
+.skill {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.skill h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.skillBar {
+  box-sizing: border-box;
+  height: 24px;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #f2f2f2;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.skillHTML,
+.skillCSS,
+.skillJavascript,
+.skillPHP,
+.skillNodeJS,
+.skillSQL,
+.skillSleep {
+  background: #ddd;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.skillHTML {
+  width: 80%;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.skillCSS {
+  width: 50%;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.skillJavascript {
+  width: 45%;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.skillPHP {
+  width: 65%;
 }
 
-.title,
-.description {
+.skillNodeJS {
+  width: 30%;
+}
+
+.skillSQL {
+  width: 75%;
+}
+
+.project {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.project p {
+  color: #ccc;
+}
+
+.eductionExperience {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.eductionExperience h2 {
+  font-weight: 500;
+}
+
+.experience {
+  text-align: right;
+}
+
+.contact {
+  margin: 15px 0;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.contactHead {
+  margin-top: 2rem;
+  text-align: center;
+}
+.contactLink {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.contact img {
+  width: 75px;
+  margin: 10px auto;
 }
 
-.grid {
+.contact img, .contact a {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.contactForm input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;  
+    border: 2px solid #ddd;
+    background: #f6f6f6;
+    border-radius: 4px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.contactForm textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background: #f6f6f6;
+  resize: none;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.contactForm input[type=submit] {
+  background: #545E6C;
+  color: white;
+  padding: 16px 32px;
+  margin: 15px 0;
+  cursor: pointer;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.footer {
+  text-align: center;
+  background: #f6f6f6;
+  font-weight: 300;
+  padding-bottom: 20px;
+
 }
 
 .logo {
-  height: 1em;
+  height: 12px;
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
+  .main {
+    flex-basis: 100%;
     flex-direction: column;
+    margin: 0;
+    padding: 30px;
+    border: none;
+  }
+
+  .contactLink {
+    display: inline-block;
+  }
+
+  .contact img {
+    width: 75px;
+    margin: 20px auto;
   }
 }
